@@ -86,12 +86,6 @@ function convert() {
       });
     }
 
-    function updateProgressBar(progress) {
-      const btn = document.getElementById("extractBtn");
-      const progressPercentage = Math.floor(progress * 100);
-      btn.style.setProperty('--progress', progressPercentage + '%');
-    }
-
 function resetForm() {
     preview.classList.add("d-none");
     previewName.classList.add("d-none");

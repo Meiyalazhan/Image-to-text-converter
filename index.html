@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.favicon.cc/?action=icon&amp;file_id=1008382#" rel="icon" type="image/x-icon">
+    <title>Image to Text</title>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div id="previewOverlay" onclick="closePreview()">
+      <img id="previewImageFullscreen">
+    </div>
+    <div class="container">
+      <h2 class="heading">Image to Text Convertor</h2>
+      <div class="boxContainer">
+        <div class="inputBox">
+          <div id="dropZone">
+            <p>📂 Drag &amp; drop image here or click to select</p>
+            <input type="file" id="imageInput" accept="image/*" hidden="">
+          </div>
+          <div id="previewCtn">
+            <img id="previewImage" class="clickable-image d-none" onclick="openPreview()" alt="OCR Preview">
+            <span id="previewName" class="d-none">Screenshot.jpg</span>
+          </div>
+          <button id="extractBtn" onclick="convert()">
+            <span>Extract Text</span>
+          </button>
+        </div>
+        <div class="outputBox">
+
+          <textarea id="result" placeholder="Formatted code will appear here..."></textarea>
+          <div class="btnCtn">
+            <button onclick="resetForm()"><span>Reset</span></button>
+            <button onclick="copyText()"><span>Copy</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
